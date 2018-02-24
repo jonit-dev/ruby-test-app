@@ -19,4 +19,11 @@ ActiveRecord::Schema.define(version: 20180222064532) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.string "text"
+    t.text "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
 end

@@ -1,0 +1,37 @@
+<div class="container">
+
+
+  <div class="row">
+    <div class="col-md-12">
+
+      <h1><%= @article.title %></h1>
+
+      <% if @article.errors.any? %>
+        <div class="alert alert-danger" role="alert">
+          <strong>The following errors occured:</strong>
+          <ul>
+            <% @article.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <p><%= @article.description %></p>
+
+
+      <a href="<%= root_path %>" class="btn btn-primary">Back to Home</a>
+
+
+
+
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+

@@ -1,6 +1,72 @@
-<h1>This is homepage RAILS ROCKS</h1>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jumbotron">
+        <h1>Ruby on Rails Rocks!</h1>
+        <br>
+        <a href="<%= new_article_path %>" class="btn btn-success">Post a new Article</a>
 
 
 
-<%= link_to 'About', about_path %>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+
+      <div class="col-md-12">
+
+
+         <% if @article.any? %>
+
+           <% @article.each do |article| %>
+
+
+             <div class="card">
+               <div class="card-body">
+                 <h5 class="card-title"><%= article.title %></h5>
+                 <p class="card-text"><%= article.description %></p>
+                 <a href="<%= article_path article.id %>" class="btn btn-primary">Check this Article</a>
+               </div>
+             </div>
+
+
+
+
+           <% end %>
+
+
+
+         <% end %>
+
+
+
+
+
+
+
+        <!--<%= link_to 'About', about_path %>-->
+
+
+      </div>
+  </div>
+  <br><br>
+  <div class="row">
+    <div class="col-md-12">
+      <a href="<%= about_path %>" class="btn btn-primary">About Page</a>
+    </div>
+  </div>
+
+
+
+  </div>
+</div>
+
+
+
+
 
